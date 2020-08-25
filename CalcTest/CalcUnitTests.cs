@@ -42,5 +42,13 @@ namespace CalcTest
             int divNum = Calc.Divide(2, 2);
             Assert.AreEqual(divNum, 1);
         }
+
+        [Test]
+        public void RiaseToPowerTest()
+        {
+            Calculator Calc = new Calculator();
+            double powerNum = Calc.RaiseToPower(4, 2);
+            Assert.AreEqual(powerNum, 16);
+        }
     }
 }

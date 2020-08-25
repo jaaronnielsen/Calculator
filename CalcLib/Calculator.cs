@@ -51,5 +51,16 @@ namespace CalcLib
             }
             return 0;
         }
+
+        /// <summary>
+        /// takes a number and raises it to a power
+        /// </summary>
+        /// <param name="number"></param>
+        /// <param name="power"></param>
+        /// <returns></returns>
+        public double RaiseToPower(double number, double power)
+        {
+           return Math.Pow(number, power);
+        }
     }
 }
