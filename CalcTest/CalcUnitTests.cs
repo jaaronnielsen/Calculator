@@ -12,7 +12,7 @@ namespace CalcTest
         }
 
         [Test]
-        public void AddTest()
+        public void AdditionTest()
         {
             Calculator Calc = new Calculator();
             int addNum = Calc.Add(2, 2);
@@ -41,6 +41,14 @@ namespace CalcTest
             Calculator Calc = new Calculator();
             int divNum = Calc.Divide(2, 2);
             Assert.AreEqual(divNum, 1);
+        }
+
+        [Test]
+        public void DivideByZeroTest()
+        {
+            Calculator Calc = new Calculator();
+            int divNum = Calc.Divide(2, 0);
+            Assert.AreEqual(divNum, 0);
         }
 
         [Test]
