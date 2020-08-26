@@ -15,7 +15,7 @@ namespace CalcTest
         public void AdditionTest()
         {
             Calculator Calc = new Calculator();
-            int addNum = Calc.Add(2, 2);
+            double addNum = Calc.Add(2, 2);
             Assert.AreEqual(addNum, 4);
         }
 
@@ -23,7 +23,7 @@ namespace CalcTest
         public void SubtractionTest()
         {
             Calculator Calc = new Calculator();
-            int subNum = Calc.Subtract(2, 2);
+            double subNum = Calc.Subtract(2, 2);
             Assert.AreEqual(subNum, 0);
         }
 
@@ -31,7 +31,7 @@ namespace CalcTest
         public void MultiplicationTest()
         {
             Calculator Calc = new Calculator();
-            int multNum = Calc.Mulitply(2, 2);
+            double multNum = Calc.Mulitply(2, 2);
             Assert.AreEqual(multNum, 4);
         }
 
@@ -39,7 +39,7 @@ namespace CalcTest
         public void DivisionTest()
         {
             Calculator Calc = new Calculator();
-            int divNum = Calc.Divide(2, 2);
+            double divNum = Calc.Divide(2, 2);
             Assert.AreEqual(divNum, 1);
         }
 
@@ -47,7 +47,7 @@ namespace CalcTest
         public void DivideByZeroTest()
         {
             Calculator Calc = new Calculator();
-            int divNum = Calc.Divide(2, 0);
+            double divNum = Calc.Divide(2, 0);
             Assert.AreEqual(divNum, 0);
         }
 

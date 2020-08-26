@@ -9,8 +9,8 @@ namespace CalcLib
         /// </summary>
         /// <param name="firstNumber"></param>
         /// <param name="secondNumber"></param>
-        /// <returns>int</returns>
-        public int Add(int firstNumber, int secondNumber)
+        /// <returns>double</returns>
+        public double Add(double firstNumber, double secondNumber)
         {
             return firstNumber + secondNumber;
         }
@@ -20,8 +20,8 @@ namespace CalcLib
         /// </summary>
         /// <param name="firstNumber"></param>
         /// <param name="secondNumber"></param>
-        /// <returns>int</returns>
-        public int Subtract(int firstNumber, int secondNumber)
+        /// <returns>double</returns>
+        public double Subtract(double firstNumber, double secondNumber)
         {
             return firstNumber - secondNumber;
         }
@@ -31,8 +31,8 @@ namespace CalcLib
         /// </summary>
         /// <param name="firstNumber"></param>
         /// <param name="secondNumber"></param>
-        /// <returns>int</returns>
-        public int Mulitply(int firstNumber, int secondNumber)
+        /// <returns>double</returns>
+        public double Mulitply(double firstNumber, double secondNumber)
         {
             return firstNumber * secondNumber;
         }
@@ -42,8 +42,8 @@ namespace CalcLib
         /// </summary>
         /// <param name="firstNumber"></param>
         /// <param name="secondNumber"></param>
-        /// <returns>int</returns>
-        public int Divide(int firstNumber, int secondNumber)
+        /// <returns>double</returns>
+        public double Divide(double firstNumber, double secondNumber)
         {
             if (secondNumber != 0)
             {
