@@ -9,7 +9,7 @@ namespace CalcLib
         /// </summary>
         /// <param name="firstNumber"></param>
         /// <param name="secondNumber"></param>
-        /// <returns></returns>
+        /// <returns>int</returns>
         public int Add(int firstNumber, int secondNumber)
         {
             return firstNumber + secondNumber;
@@ -20,7 +20,7 @@ namespace CalcLib
         /// </summary>
         /// <param name="firstNumber"></param>
         /// <param name="secondNumber"></param>
-        /// <returns></returns>
+        /// <returns>int</returns>
         public int Subtract(int firstNumber, int secondNumber)
         {
             return firstNumber - secondNumber;
@@ -31,7 +31,7 @@ namespace CalcLib
         /// </summary>
         /// <param name="firstNumber"></param>
         /// <param name="secondNumber"></param>
-        /// <returns></returns>
+        /// <returns>int</returns>
         public int Mulitply(int firstNumber, int secondNumber)
         {
             return firstNumber * secondNumber;
@@ -42,7 +42,7 @@ namespace CalcLib
         /// </summary>
         /// <param name="firstNumber"></param>
         /// <param name="secondNumber"></param>
-        /// <returns></returns>
+        /// <returns>int</returns>
         public int Divide(int firstNumber, int secondNumber)
         {
             if (secondNumber != 0)
@@ -57,7 +57,7 @@ namespace CalcLib
         /// </summary>
         /// <param name="number"></param>
         /// <param name="power"></param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         public double RaiseToPower(double number, double power)
         {
            return Math.Pow(number, power);
