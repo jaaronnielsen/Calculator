@@ -2,15 +2,16 @@
 
 namespace CalcLib
 {
-    public class Calculator
+    public class SimpleCalculator
     {
+        public double firstNumber { get; set; }
+        public double secondNumber { get; set; }
+        public double result { get; set; }
         /// <summary>
         /// adds two numbers
         /// </summary>
-        /// <param name="firstNumber"></param>
-        /// <param name="secondNumber"></param>
         /// <returns>double</returns>
-        public double Add(double firstNumber, double secondNumber)
+        public double Add()
         {
             return firstNumber + secondNumber;
         }
@@ -18,21 +19,17 @@ namespace CalcLib
         /// <summary>
         /// subtracts two numbers
         /// </summary>
-        /// <param name="firstNumber"></param>
-        /// <param name="secondNumber"></param>
         /// <returns>double</returns>
-        public double Subtract(double firstNumber, double secondNumber)
-        {
+        public double Subtract()
+        { 
             return firstNumber - secondNumber;
         }
 
         /// <summary>
         /// multiplies two numbers
         /// </summary>
-        /// <param name="firstNumber"></param>
-        /// <param name="secondNumber"></param>
         /// <returns>double</returns>
-        public double Mulitply(double firstNumber, double secondNumber)
+        public double Mulitply()
         {
             return firstNumber * secondNumber;
         }
@@ -40,10 +37,8 @@ namespace CalcLib
         /// <summary>
         /// divides two numbers
         /// </summary>
-        /// <param name="firstNumber"></param>
-        /// <param name="secondNumber"></param>
         /// <returns>double</returns>
-        public double Divide(double firstNumber, double secondNumber)
+        public double Divide()
         {
             if (secondNumber != 0)
             {
@@ -55,12 +50,10 @@ namespace CalcLib
         /// <summary>
         /// takes a number and raises it to a power
         /// </summary>
-        /// <param name="number"></param>
-        /// <param name="power"></param>
         /// <returns>double</returns>
-        public double RaiseToPower(double number, double power)
+        public double RaiseToPower()
         {
-           return Math.Pow(number, power);
+           return Math.Pow(firstNumber, secondNumber);
         }
     }
 }

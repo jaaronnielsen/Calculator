@@ -14,48 +14,60 @@ namespace CalcTest
         [Test]
         public void AdditionTest()
         {
-            Calculator Calc = new Calculator();
-            double addNum = Calc.Add(2, 2);
+            SimpleCalculator Calc = new SimpleCalculator();
+            Calc.firstNumber = 2;
+            Calc.secondNumber = 2;
+            double addNum = Calc.Add();
             Assert.AreEqual(addNum, 4);
         }
 
         [Test]
         public void SubtractionTest()
         {
-            Calculator Calc = new Calculator();
-            double subNum = Calc.Subtract(2, 2);
+            SimpleCalculator Calc = new SimpleCalculator();
+            Calc.firstNumber = 2;
+            Calc.secondNumber = 2;
+            double subNum = Calc.Subtract();
             Assert.AreEqual(subNum, 0);
         }
 
         [Test]
         public void MultiplicationTest()
         {
-            Calculator Calc = new Calculator();
-            double multNum = Calc.Mulitply(2, 2);
+            SimpleCalculator Calc = new SimpleCalculator();
+            Calc.firstNumber = 2;
+            Calc.secondNumber = 2;
+            double multNum = Calc.Mulitply();
             Assert.AreEqual(multNum, 4);
         }
 
         [Test]
         public void DivisionTest()
         {
-            Calculator Calc = new Calculator();
-            double divNum = Calc.Divide(2, 2);
+            SimpleCalculator Calc = new SimpleCalculator();
+            Calc.firstNumber = 2;
+            Calc.secondNumber = 2;
+            double divNum = Calc.Divide();
             Assert.AreEqual(divNum, 1);
         }
 
         [Test]
         public void DivideByZeroTest()
         {
-            Calculator Calc = new Calculator();
-            double divNum = Calc.Divide(2, 0);
+            SimpleCalculator Calc = new SimpleCalculator();
+            Calc.firstNumber = 2;
+            Calc.secondNumber = 0;
+            double divNum = Calc.Divide();
             Assert.AreEqual(divNum, 0);
         }
 
         [Test]
         public void RiaseToPowerTest()
         {
-            Calculator Calc = new Calculator();
-            double powerNum = Calc.RaiseToPower(4, 2);
+            SimpleCalculator Calc = new SimpleCalculator();
+            Calc.firstNumber = 4;
+            Calc.secondNumber = 2;
+            double powerNum = Calc.RaiseToPower();
             Assert.AreEqual(powerNum, 16);
         }
     }
