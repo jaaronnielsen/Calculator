@@ -139,9 +139,9 @@
                     <Button Content="Export"
                         Grid.Row="1"
                         Grid.Column="2"
-                        Command="{Binding ExportToExcel}"
+                        Command="{Binding ExportFile}"
                         Margin="5"
-                        HorizontalAlignment="Right"
+                        HorizontalAlignment="Center"
                         MinWidth="90"/>
                     <ScrollViewer>
                         <DataGrid ItemsSource="{Binding History}"

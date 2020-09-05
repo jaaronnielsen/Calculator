@@ -4,6 +4,7 @@ using OfficeOpenXml;
 using OfficeOpenXml.Filter;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -20,12 +21,12 @@ namespace Calculator.WPF
         public bool FileExists(string path);
         public IEnumerable<SimpleCalculator> ReadFromExcel(string path);
         public Task<IEnumerable<SimpleCalculator>> ReadFromExcelAsync(string path);
-        public void ExportFileToExcel(IEnumerable<SimpleCalculator> history);
+        public void ExportFileToExcel(ObservableCollection<SimpleCalculator> history);
     }
     class FileProvider : IFileProvider
     {
         public bool FileExists(string path) => File.Exists(path);
-        public void ExportFileToExcel(IEnumerable<SimpleCalculator> history)
+        public void ExportFileToExcel(ObservableCollection<SimpleCalculator> history)
         {
             var fileName = getFileName();
             

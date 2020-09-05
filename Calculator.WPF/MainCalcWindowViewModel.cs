@@ -104,15 +104,11 @@ namespace Calculator.WPF
                 return fileProvider.FileExists(ImportFilePath) && !IsBusy;
             });
 
-        private DelegateCommand exportToExcel;
-        public DelegateCommand ExportToExcel => exportToExcel ??= new DelegateCommand(
+        private DelegateCommand exportFile;
+        public DelegateCommand ExportFile => exportFile ??= new DelegateCommand(
             () =>//execute
             {
                 fileProvider.ExportFileToExcel(History);
-            },
-            () =>//canExecute
-            {
-                return History.Any();
             });
 
         private string importFilePath;
