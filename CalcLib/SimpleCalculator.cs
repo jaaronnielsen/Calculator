@@ -1,48 +1,56 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace CalcLib
 {
-    public class SimpleCalculator
+    public class SimpleCalculator : ICloneable, IDataErrorInfo
     {
         public double firstNumber { get; set; }
         public double secondNumber { get; set; }
         public double result { get; set; }
+
+        public string Error => throw new NotImplementedException();
+
         /// <summary>
         /// adds two numbers
         /// </summary>
         /// <returns>double</returns>
-        public double Add()
+        public double AddNumbers()
         {
-            return firstNumber + secondNumber;
+            result = firstNumber + secondNumber;
+            return result;
         }
 
         /// <summary>
         /// subtracts two numbers
         /// </summary>
         /// <returns>double</returns>
-        public double Subtract()
+        public double SubtractNumbers()
         { 
-            return firstNumber - secondNumber;
+            result = firstNumber - secondNumber;
+            return result;
         }
 
         /// <summary>
         /// multiplies two numbers
         /// </summary>
         /// <returns>double</returns>
-        public double Mulitply()
+        public double MulitplyNumbers()
         {
-            return firstNumber * secondNumber;
+            result = firstNumber * secondNumber;
+            return result;
         }
 
         /// <summary>
         /// divides two numbers
         /// </summary>
         /// <returns>double</returns>
-        public double Divide()
+        public double DivideNumbers()
         {
             if (secondNumber != 0)
             {
-                return firstNumber / secondNumber;
+                result = firstNumber / secondNumber;
+                return result;
             }
             return 0;
         }
@@ -53,7 +61,43 @@ namespace CalcLib
         /// <returns>double</returns>
         public double RaiseToPower()
         {
-           return Math.Pow(firstNumber, secondNumber);
+            result = Math.Pow(firstNumber, secondNumber);
+            return result;
+        }
+
+        public object Clone()
+        {
+            return new SimpleCalculator()
+            {
+                firstNumber = firstNumber,
+                secondNumber = secondNumber,
+                result = result,
+            };
+        }
+
+        public string this[string columnName]
+        {
+            get
+            {
+                switch(columnName)
+                {
+                    case nameof(firstNumber):
+                        if (firstNumber == 0)
+                        {
+                            return "This number can't be zero.";
+                        }
+                        break;
+                    case nameof(secondNumber):
+                        if (secondNumber == 0)
+                        {
+                            return "This number can't be zero.";
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                return string.Empty;
+            }
         }
     }
 }

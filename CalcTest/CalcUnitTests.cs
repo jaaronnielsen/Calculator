@@ -17,7 +17,7 @@ namespace CalcTest
             SimpleCalculator Calc = new SimpleCalculator();
             Calc.firstNumber = 2;
             Calc.secondNumber = 2;
-            double addNum = Calc.Add();
+            double addNum = Calc.AddNumbers();
             Assert.AreEqual(addNum, 4);
         }
 
@@ -27,7 +27,7 @@ namespace CalcTest
             SimpleCalculator Calc = new SimpleCalculator();
             Calc.firstNumber = 2;
             Calc.secondNumber = 2;
-            double subNum = Calc.Subtract();
+            double subNum = Calc.SubtractNumbers();
             Assert.AreEqual(subNum, 0);
         }
 
@@ -37,7 +37,7 @@ namespace CalcTest
             SimpleCalculator Calc = new SimpleCalculator();
             Calc.firstNumber = 2;
             Calc.secondNumber = 2;
-            double multNum = Calc.Mulitply();
+            double multNum = Calc.MulitplyNumbers();
             Assert.AreEqual(multNum, 4);
         }
 
@@ -47,7 +47,7 @@ namespace CalcTest
             SimpleCalculator Calc = new SimpleCalculator();
             Calc.firstNumber = 2;
             Calc.secondNumber = 2;
-            double divNum = Calc.Divide();
+            double divNum = Calc.DivideNumbers();
             Assert.AreEqual(divNum, 1);
         }
 
@@ -57,7 +57,7 @@ namespace CalcTest
             SimpleCalculator Calc = new SimpleCalculator();
             Calc.firstNumber = 2;
             Calc.secondNumber = 0;
-            double divNum = Calc.Divide();
+            double divNum = Calc.DivideNumbers();
             Assert.AreEqual(divNum, 0);
         }
 

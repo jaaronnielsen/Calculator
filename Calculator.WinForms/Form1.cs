@@ -58,7 +58,7 @@ namespace Calculator.WinForms
                 calc.secondNumber = secondNum;
             }
 
-            calc.result = calc.Add();
+            calc.result = calc.AddNumbers();
             txtResult.Text = calc.result.ToString("n");
             calcList.Add(calc);
         }
@@ -72,7 +72,7 @@ namespace Calculator.WinForms
                 calc.secondNumber = secondNum;
             }
 
-            calc.result = calc.Subtract();
+            calc.result = calc.SubtractNumbers();
             txtResult.Text = calc.result.ToString("n");
             calcList.Add(calc);
         }
@@ -86,7 +86,7 @@ namespace Calculator.WinForms
                 calc.secondNumber = secondNum;
             }
 
-            calc.result = calc.Mulitply();
+            calc.result = calc.MulitplyNumbers();
             txtResult.Text = calc.result.ToString("n");
             calcList.Add(calc);
         }
@@ -100,7 +100,7 @@ namespace Calculator.WinForms
                 calc.secondNumber = secondNum;
             }
 
-           calc.result = calc.Divide();
+           calc.result = calc.DivideNumbers();
            txtResult.Text = calc.result.ToString("n");
             calcList.Add(calc);
         }
